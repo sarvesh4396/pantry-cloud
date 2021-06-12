@@ -83,7 +83,7 @@ class Pantry(Utility):
         if self.res:
             try:
                 data = self.res.json()
-            except TypeError:
+            except json.decoder.JSONDecodeError or TypeError:
                 data = self.res.text
 
         if self.outputfile:
