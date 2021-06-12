@@ -30,7 +30,7 @@ setup(
     long_description_content_type="text/markdown",
     python_requires=REQUIRES_PYTHON,
     url=GIT_URL,
-    download_url='https://github.com/sarvesh4396/pantry-cloud/archive/refs/tags/V_01.tar.gz',
+    download_url='https://github.com/sarvesh4396/pantry-cloud/archive/refs/tags/V_001.tar.gz',
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     entry_points={},
     install_requires=["requests"],
