@@ -1,6 +1,4 @@
 from __future__ import print_function
-from os import name
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -11,7 +9,7 @@ def get_long_description():
 
 
 # Package meta-data.
-NAME = "pantry-cloud"
+NAME = "pantry_cloud"
 DESCRIPTION = "A Python package implimenting getpantry.cloud usage."
 KEYWORDS = [NAME, "JSON", "API", "CLOUD STORAGE"]
 GIT_URL = "https://github.com/sarvesh4396/pantry-cloud"
