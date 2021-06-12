@@ -1,1 +1,0 @@
-from .pantry_cloud import Pantry as pantry
