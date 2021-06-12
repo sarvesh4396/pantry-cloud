@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, os
 
 BASE_URL = "https://getpantry.cloud/apiv1/pantry/"
 HEADERS = {"Content-Type": "application/json"}
@@ -24,6 +24,9 @@ class Utility:
         except Exception as e:
             print(f"Got Exception {e}.\nPlease report.")
             exit(0)
+
+    def is_path(self, path):
+        return os.path.exists(path)
 
 
 class Pantry(Utility):
