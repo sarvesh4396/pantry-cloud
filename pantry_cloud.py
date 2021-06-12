@@ -15,3 +15,12 @@ class Utility:
     def read_json(self, path):
         with open(path, "r", encoding="utf-8", errors="ignore") as file:
             return json.load(file)
+
+
+
+class Pantry(Utility):
+    def __init__(self,api_key=None) -> None:
+        if api_key:
+            self.api_key = api_key
+        else:
+            raise "Provide an API Key."
