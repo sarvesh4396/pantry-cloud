@@ -10,7 +10,7 @@ def get_long_description():
 
 # Package meta-data.
 NAME = "pantry_cloud"
-DESCRIPTION = "A Python package implimenting getpantry.cloud usage."
+DESCRIPTION = "Free JSON Storage API Implimentation In Python."
 KEYWORDS = [NAME, "JSON", "API", "CLOUD STORAGE"]
 GIT_URL = "https://github.com/sarvesh4396/pantry-cloud"
 AUTHOR = "Sarvesh Kumar Dwivedi"
