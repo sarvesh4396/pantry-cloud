@@ -40,12 +40,14 @@ class Pantry(Utility):
         self.outputfile = outputfile
         url = f"{BASE_URL}{self.api_key}"
         self.res = requests.get(url, headers=HEADERS)
+        return self.check_response()
 
     def basket(self, basket=None, outputfile=None):
         self.outputfile = outputfile
         if basket:
             url = f"{BASE_URL}{self.api_key}/basket/{basket}"
             self.res = requests.get(url, headers=HEADERS)
+            return self.check_response()
 
     def update(self, basket=None, outputfile=None):
         self.outputfile = outputfile
@@ -53,6 +55,7 @@ class Pantry(Utility):
             url = f"{BASE_URL}{self.api_key}/basket/{basket}"
             data = self.read_json(path=self.outputfile)
             self.res = requests.put(url, headers=HEADERS, data=json.dumps(data))
+            return self.check_response()
 
     def create(self, basket=None, inputfile=None):
         if basket:
@@ -67,19 +70,23 @@ class Pantry(Utility):
                     raise f"Not a valid path : {inputfile}"
             else:
                 self.res = requests.post(url, headers=HEADERS)
+            return self.check_response()
 
     def delete(self, basket=None):
         if basket:
             url = f"{BASE_URL}{self.api_key}/basket/{basket}"
             self.res = requests.delete(url, headers=HEADERS)
+            return self.check_response()
 
     def check_response(self):
+        data = None
         if self.res:
             try:
                 data = self.res.json()
             except TypeError:
                 data = self.res.text
-                print(data)
 
         if self.outputfile:
             self.write_json(path=self.outputfile, data=data)
+
+        return data
