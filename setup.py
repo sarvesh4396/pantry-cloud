@@ -28,7 +28,7 @@ setup(
     long_description_content_type="text/markdown",
     python_requires=REQUIRES_PYTHON,
     url=GIT_URL,
-    download_url="https://github.com/sarvesh4396/pantry-cloud/archive/refs/tags/V1.0.tar.gz",
+    download_url="https://github.com/sarvesh4396/pantry-cloud/archive/refs/tags/V1.1.tar.gz",
     install_requires=["requests"],
     include_package_data=True,
     license="MIT",
