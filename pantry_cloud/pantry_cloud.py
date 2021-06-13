@@ -49,11 +49,15 @@ class Pantry(Utility):
             self.res = requests.get(url, headers=HEADERS)
             return self.check_response()
 
-    def update(self, basket=None, outputfile=None):
+    def update(self, basket=None, outputfile=None, inputfile=None):
         self.outputfile = outputfile
+
         if basket:
             url = f"{BASE_URL}{self.api_key}/basket/{basket}"
-            data = self.read_json(path=self.outputfile)
+            if self.is_path(inputfile):
+                data = self.read_json(path=inputfile)
+            else:
+                raise "Provide input data file."
             self.res = requests.put(url, headers=HEADERS, data=json.dumps(data))
             return self.check_response()
 
