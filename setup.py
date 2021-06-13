@@ -15,7 +15,7 @@ KEYWORDS = [NAME, "JSON", "API", "CLOUD STORAGE"]
 GIT_URL = "https://github.com/sarvesh4396/pantry-cloud"
 AUTHOR = "Sarvesh Kumar Dwivedi"
 REQUIRES_PYTHON = ">=3.7.0"
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 
 setup(
@@ -28,9 +28,10 @@ setup(
     long_description_content_type="text/markdown",
     python_requires=REQUIRES_PYTHON,
     url=GIT_URL,
-    download_url="https://github.com/sarvesh4396/pantry-cloud/archive/refs/tags/V1.1.tar.gz",
+    download_url="https://github.com/sarvesh4396/pantry-cloud/archive/refs/tags/v1.2.tar.gz",
     install_requires=["requests"],
     include_package_data=True,
+    entry_points={"console_scripts": ["pantry = pantry_cloud.cli:main"]},
     license="MIT",
     keywords=KEYWORDS,
     classifiers=[
