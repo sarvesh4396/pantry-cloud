@@ -37,7 +37,7 @@ def main():
         data = pantry.basket(basket=args.basket, outputfile=args.output_file)
         print(data)
     if args.update:
-        data = pantry.update(basket=args.basket, outputfile=args.output_file)
+        data = pantry.update(basket=args.basket, outputfile=args.output_file,inputfile=args.input_file)
         print(data)
     if args.create:
         data = pantry.create(basket=args.basket, inputfile=args.input_file)
